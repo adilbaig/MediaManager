@@ -1,0 +1,8 @@
+body { width: 80%; max-width: 1000px; margin: 1em auto 0 auto;}
+form.add_media { width: 400px; margin: 1em auto; padding: 1em; }
+form.add_media .form-group { padding-bottom: 2em; }
+form.add_media button { margin-top: 1em; }
+.logout-button { float:right; }
+
+audio { width:400px; margin: 2em auto; }
+#playlist .active a {font-weight: bold;}

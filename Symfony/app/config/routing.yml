@@ -1,0 +1,12 @@
+demo_media:
+    resource: "@DemoMediaBundle/Controller/MediaController.php"
+    type:     annotation
+    prefix:   /
+
+login:
+    path:     /login
+    defaults: { _controller: DemoMediaBundle:Security:login }
+login_check:
+    path: /login_check
+logout:
+    path: /logout

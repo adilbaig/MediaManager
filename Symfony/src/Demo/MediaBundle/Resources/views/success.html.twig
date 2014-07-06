@@ -1,0 +1,14 @@
+{% extends "DemoMediaBundle::layout.html.twig" %}
+
+{% block content %}
+    
+<h1>Success!</h1>
+<div class="alert alert-success">
+    <strong>Your file was saved successfully.</strong>
+</div>
+
+<ul>
+    <li><a href="{{ path('add') }}">Add another file</a></li>
+    <li><a href="{{ path('list') }}">View file listing</a></li>
+</ul>
+{% endblock %}

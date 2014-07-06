@@ -1,0 +1,42 @@
+{% extends "DemoMediaBundle::layout.html.twig" %}
+
+{% block content %}
+       
+    {{ form_start(form, {'attr': {'class': 'form_horizontal add_media'}}) }}
+        <fieldset>
+            <legend >Add an MP3 file</legend>
+            {% if not form.vars.valid%}
+                <div class="alert alert-danger"> {{ form_errors(form) }} </div>
+            {% endif %}
+            
+            {% set element = form.file %}
+            {{ block('form_element') }}
+            
+            {% set element = form.title %}
+            {{ block('form_element') }}
+            
+            {% set element = form.artist %}
+            {{ block('form_element') }}
+            
+            {% set element = form.album %}
+            {{ block('form_element') }}
+            
+            {% set element = form.genre %}
+            {{ block('form_element') }}
+            
+            {{ form_widget(form.submit, {'attr': {'class': 'btn btn-lg btn-default'}}) }}
+        </fieldset>
+    {{ form_end(form) }}
+        
+{% endblock %}
+
+{% block form_element %}
+    <div class="form-group">
+        {{ form_label(element, null, {'label_attr': {'class': 'control-label col-xs-2'}}) }}
+        <div class="col-xs-10">
+            {{ form_widget(element, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(element) }}
+        </div>
+    </div>
+{% endblock %}
+

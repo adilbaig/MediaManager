@@ -1,0 +1,74 @@
+<?php
+
+namespace Demo\MediaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Media
+ *
+ * @ORM\Table(name="media")
+ * @ORM\Entity
+ */
+class Media
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=250, nullable=false)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="file", type="text", nullable=false)
+     */
+    private $file;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="artist", type="string", length=250, nullable=false)
+     */
+    private $artist;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="album", type="string", length=250, nullable=false)
+     */
+    private $album;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="genre", type="string", length=100, nullable=false)
+     */
+    private $genre;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="userid", type="integer", nullable=true)
+     */
+    private $userid;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_on", type="datetime", nullable=false)
+     */
+    private $updatedOn;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+}
